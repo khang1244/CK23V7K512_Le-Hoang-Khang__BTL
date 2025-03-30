@@ -12,6 +12,7 @@ class ContactService {
       address: payload.address,
       phone: payload.phone,
       workSchedule: payload.workSchedule,
+      image: payload.image,
       favorite: payload.favorite,
     };
 
