@@ -24,15 +24,18 @@ export default {
             {{ contact.phone }}
         </div>
         <div class="p-1">
-  <strong>Ngày làm việc trong tuần:</strong>
-  <table class="table table-bordered table-sm mt-2" style="width: auto;">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">Ngày làm việc</th>
-        <th scope="col">Ca làm việc</th>
-      </tr>
-    </thead>
-    <tbody>
+             <strong>Giới tính:</strong> {{ contact.gender }}
+        </div>
+        <div class="p-1">
+             <strong>Ngày làm việc trong tuần:</strong>
+             <table class="table table-bordered table-sm mt-2" style="width: auto;">
+                 <thead class="thead-light">
+                     <tr>
+                        <th scope="col">Ngày làm việc</th>
+                        <th scope="col">Ca làm việc</th>
+                    </tr>
+                </thead>
+     <tbody>
       <tr v-for="(schedule, index) in contact.workSchedule" :key="index">
         <td>{{ schedule.day }}</td>
         <td>{{ schedule.timework || 'Không có ca làm việc' }}</td>

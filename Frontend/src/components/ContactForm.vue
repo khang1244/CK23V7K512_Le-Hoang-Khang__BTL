@@ -20,7 +20,13 @@
       <Field name="phone" type="tel" class="form-control" v-model="contactLocal.phone"></Field>
       <ErrorMessage name="phone" class="error-feedback"/>
     </div>
-
+<div class="form-group">
+  <label for="gender">Giới tính</label>
+  <select name="gender" class="form-control" v-model="contactLocal.gender">
+    <option value="Nam">Nam</option>
+    <option value="Nữ">Nữ</option>
+  </select>
+</div>
     <div class="form-group">
   <label><strong>Ngày làm việc trong tuần:</strong></label>
   <div class="work-schedule-grid">
