@@ -15,11 +15,25 @@ export default {
         ContactForm,
     },
     data() {
-        return {
-            contact: new Object(),
-            message: "",
-        };
+         return {
+    contact: {
+      name: "",
+      email: "",
+      address: "",
+      phone: "",
+      favorite: false,
+      workSchedule: [
+        { day: "Thứ 2", timework: "" },
+        { day: "Thứ 3", timework: "" },
+        { day: "Thứ 4", timework: "" },
+        { day: "Thứ 5", timework: "" },
+        { day: "Thứ 6", timework: "" },
+        { day: "Thứ 7", timework: "" }
+      ]
     },
+    message: "",
+  };
+},
     methods: {
         async createContact(data) {
             try {

@@ -34,3 +34,20 @@ label {
 .error-feedback {
     color: red;
 }
+.work-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* <-- thay vì auto-fit */
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+}
+.schedule-item select {
+  width: 100%;
+  min-width: 240px; /* 👈 Cho đủ độ dài hiển thị */
+  padding: 8px;
+  font-size: 15px;
+}
