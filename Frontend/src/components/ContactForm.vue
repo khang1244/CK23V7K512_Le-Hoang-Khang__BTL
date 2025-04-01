@@ -28,7 +28,7 @@
   </select>
 </div>
     <div class="form-group">
-  <label><strong>Ngày làm việc trong tuần:</strong></label>
+  <label>Ngày làm việc trong tuần: </label>
   <div class="work-schedule-grid">
     <div v-for="(schedule, index) in contactLocal.workSchedule" :key="index" class="schedule-item">
       <label>{{ schedule.day }}</label>
@@ -36,7 +36,7 @@
         <option value="">-- Không có ca làm việc --</option>
         <option value="Ca sáng (7h30 - 11h30)">Ca sáng (7h30 - 11h30)</option>
         <option value="Ca chiều (13h30 - 17h30)">Ca chiều (13h30 - 17h30)</option>
-        <option value="Cả ngày (7h30 - 22h)">Cả ngày (7h30 - 17h30)</option>
+        <option value="Cả ngày (7h30 - 17h30)">Cả ngày (7h30 - 17h30)</option>
       </select>
     </div>
   </div>

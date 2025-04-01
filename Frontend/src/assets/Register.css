@@ -1,0 +1,38 @@
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: #343a40;
+  color: white;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.alert {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Màu sắc cho các mức độ mạnh yếu của mật khẩu */
+.weak-password {
+  color: red;
+}
+
+.medium-password {
+  color: orange;
+}
+
+.strong-password {
+  color: green;
+}
+
+.input-group-append {
+  cursor: pointer;
+}

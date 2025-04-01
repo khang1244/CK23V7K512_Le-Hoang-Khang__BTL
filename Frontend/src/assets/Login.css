@@ -1,0 +1,20 @@
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: #343a40;
+  color: white;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.input-group-append {
+  cursor: pointer;
+}
