@@ -20,12 +20,17 @@
       <Field name="phone" type="tel" class="form-control" v-model="contactLocal.phone"></Field>
       <ErrorMessage name="phone" class="error-feedback"/>
     </div>
-<div class="form-group">
-  <label for="gender">Giới tính</label>
-  <select name="gender" class="form-control" v-model="contactLocal.gender">
-    <option value="Nam">Nam</option>
-    <option value="Nữ">Nữ</option>
-  </select>
+    <div class="form-group">
+      <label for="birthday">Ngày sinh</label>
+      <Field name="birthday" type="date" class="form-control" v-model="contactLocal.birthday" />
+      <ErrorMessage name="birthday" class="error-feedback" />
+    </div>
+    <div class="form-group">
+       <label for="gender">Giới tính</label>
+       <select name="gender" class="form-control" v-model="contactLocal.gender">
+          <option value="Nam">Nam</option>
+          <option value="Nữ">Nữ</option>
+       </select>
 </div>
     <div class="form-group">
   <label>Ngày làm việc trong tuần: </label>
@@ -107,7 +112,11 @@ export default {
         .matches(
           /((09|03|07|08|05)+([0-9]{8})\b)/g,
           "Số điện thoại không hợp lệ."
-        ),
+      ),
+     birthday: yup
+        .date()
+        .max(new Date(), "Ngày sinh phải nhỏ hơn ngày hiện tại.")
+        .required("Ngày sinh là bắt buộc."),
     });
     return {
       contactLocal: this.contact ? this.contact : {
@@ -115,7 +124,8 @@ export default {
         email: "",
         address: "",
         phone: "",
-         image: "",
+        image: "",
+        birthday: "",
         favorite: false,
         workSchedule: [
           { day: "Thứ 2", timework: "" },

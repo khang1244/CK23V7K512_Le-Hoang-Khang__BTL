@@ -3,6 +3,17 @@ export default {
     props: {
         contact: { type: Object, required: true },
     },
+     methods: {
+    // Phương thức định dạng ngày sinh
+    formatBirthday(birthday) {
+      if (!birthday) return '';
+      const date = new Date(birthday);
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+  }
 };
 </script>
 <template>
@@ -23,6 +34,11 @@ export default {
       <strong>Điện thoại:</strong>
       {{ contact.phone }}
     </div>
+   <div class="p-1">
+      <strong>Ngày sinh:</strong>
+      {{ formatBirthday(contact.birthday) || 'Chưa có thông tin' }}
+   </div>
+   
     <div class="p-1">
       <strong>Giới tính:</strong> {{ contact.gender }}
     </div>
